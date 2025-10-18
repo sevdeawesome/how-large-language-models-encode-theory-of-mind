@@ -22,7 +22,7 @@ def set_seed(seed: int):
 def parse_model_type(name: str) -> str:
     n = name.lower()
     if "opt" in n: return "opt"
-    if "llama" in n or "vicuna" in n or "qwen" in n: return "llama"
+    if "llama" in n or "vicuna" in n or "qwen" in n or "gemma" in n: return "llama"
     if "mistral" in n: return "mistral"
     raise NotImplementedError(f"Unknown model family: {name}")
 

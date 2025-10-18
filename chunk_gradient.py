@@ -22,7 +22,7 @@ def infer_model_type(name_or_path: str, model: transformers.PreTrainedModel) -> 
     n = (name_or_path or "").lower()
     if "opt" in n:
         return "opt"
-    if any(k in n for k in ["llama", "vicuna", "qwen", "deepseek"]):
+    if any(k in n for k in ["llama", "vicuna", "qwen", "deepseek", "gemma"]):
         return "llama"
     if "mistral" in n:
         return "mistral"
